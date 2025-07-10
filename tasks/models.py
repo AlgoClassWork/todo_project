@@ -7,3 +7,6 @@ class Task(models.Model):
     description = models.TextField('Описание', blank=True, null=True)
     completed = models.BooleanField('Выполнено', default=False)
     created_at = models.DateTimeField('Дата создания', auto_now_add=True)
+
+    def __str__(self):
+        return self.title
