@@ -51,6 +51,13 @@
 </head>
 <body>
 
+<h2>Добавить новую задачу</h2>
+<form action="create/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button> Добавить </button>
+</form>
+
 <h1>Мои задачи</h1>
 <div class="task-list">
     {% for task in tasks %}
@@ -60,6 +67,8 @@
         </div>
     {% endfor %}
 </div>
+
+
 
 </body>
 </html>
