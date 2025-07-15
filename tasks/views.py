@@ -23,3 +23,10 @@ def delete_task(request, id):
     task = Task.objects.get(id=id)
     task.delete()
     return redirect('home')
+
+#http://127.0.0.1:8000/complete/5
+def complete_task(request, id):
+    task = Task.objects.get(id=id)
+    task.completed = not task.completed
+    task.save()
+    return redirect('home')
