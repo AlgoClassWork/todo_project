@@ -149,6 +149,10 @@
             {% csrf_token %}
             <button> Удалить </button>
         </form>
+        <form action="{% url 'complete' id=task.id %}" method="post"> 
+            {% csrf_token %}
+            <button>{% if task.completed %} Отменить {% else %} Сделано {% endif %}</button>
+        </form>
     {% endfor %}
 
 </div>
