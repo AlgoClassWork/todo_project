@@ -25,5 +25,7 @@ urlpatterns = [
     #http://127.0.0.1:8000/ -> ozon.ru
     path('', home, name='home'),
     #http://127.0.0.1:8000/create/
-    path('create/', create_task)
+    path('create/', create_task),
+    #http://127.0.0.1:8000/delete/9
+    path('delete/<int:id>/', delete_task)
 ]
