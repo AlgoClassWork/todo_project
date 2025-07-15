@@ -27,5 +27,7 @@ urlpatterns = [
     #http://127.0.0.1:8000/create/
     path('create/', create_task),
     #http://127.0.0.1:8000/delete/9
-    path('delete/<int:id>/', delete_task, name='delete')
+    path('delete/<int:id>/', delete_task, name='delete'),
+    #http://127.0.0.1:8000/delete/9
+    path('complete/<int:id>/', complete_task, name='complete')
 ]
