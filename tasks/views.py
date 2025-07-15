@@ -17,3 +17,9 @@ def create_task(request):
         form.save()
 
     return redirect('home')
+
+#http://127.0.0.1:8000/delete/1
+def delete_task(request, id):
+    task = Task.objects.get(id=id)
+    task.delete()
+    return redirect('home')
